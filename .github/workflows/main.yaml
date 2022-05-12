@@ -20,8 +20,11 @@ jobs:
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       -
-        name: echo ref_name and username
-        run: echo ${{ github.ref_name }} {{ secrets.DOCKER_HUB_USERNAME }}
+        name: echo ref_name
+        run: echo ${{ github.ref_name }}
+      -
+        name: echo username
+        run: echo ${{ secrets.DOCKER_HUB_USERNAME }}
       -
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -32,7 +35,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:{{ github.ref_name }}
+          tags: ${{ secrets.DOCKER_HUB_ACCOUNT }}/randnum-cicd:{{ github.ref_name }}
 
   # slack:
   # remember runs on and steps
