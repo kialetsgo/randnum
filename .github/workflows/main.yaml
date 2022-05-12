@@ -43,7 +43,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Lalala"
+                    "text": "Name: Chew Kia Leng\nMatriculation: A0235431N\nEmail: e0828944@u.nus.edu\nRepo: git@github.com:raysonckl/randnum.git\nImage name: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:${{ github.ref_name }}\nImage URL: https://hub.docker.com/repository/docker/${{ secrets.DOCKER_HUB_USERNAME }/randnum-cicd"
                   }
                 }
               ]
