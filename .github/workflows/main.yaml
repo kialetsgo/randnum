@@ -27,7 +27,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/randnumci:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/randnumci:{{github.ref_name}}
 
   # slack:
   #   - 
