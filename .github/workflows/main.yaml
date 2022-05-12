@@ -1,7 +1,6 @@
 name: randnum workshop
 on:
   push:
-    branches:
     tags:
     - "v*"
 jobs: 
@@ -30,6 +29,7 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:{{github.ref_name}}
 
   # slack:
+  # remember runs on and steps
   #   - 
   #     name: Send custom JSON data to Slack workflow
   #     id: slack
