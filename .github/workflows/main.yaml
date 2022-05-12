@@ -43,7 +43,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: Chew Kia Leng\nMatriculation: A0235431N\nEmail: e0828944@u.nus.edu\nRepo: git@github.com:raysonckl/randnum.git\nImage name: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:${{ github.ref_name }}\nImage URL: https://hub.docker.com/repository/docker/${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd"
+                    "text": "Name: ${{ env.Name }}\nMatriculation: ${{ env.mat_no }}\nEmail: ${{ env.email }}\nRepo: ${{ github.repositoryUrl }}\nImage name: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:${{ github.ref_name }}\nImage URL: https://hub.docker.com/repository/docker/${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd"
                   }
                 }
               ]
@@ -51,3 +51,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          name: ${{ secrets.NAME }}
+          mat_no: ${{ secrets.MATRICULATION_NUMBER }}
+          email: ${{ secrets.EMAIL }}
+
