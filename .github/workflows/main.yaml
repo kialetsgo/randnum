@@ -43,7 +43,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Name: ${{ env.Name }}\nMatriculation: ${{ env.mat_no }}\nEmail: ${{ env.email }}\nRepo: ${{ github.repositoryUrl }}\nImage name: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:${{ github.ref_name }}\nImage URL: https://hub.docker.com/repository/docker/${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd"
+                    "text": "Name: ${{ env.name }}\nMatriculation: ${{ env.mat_no }}\nEmail: ${{ env.email }}\nRepo: ${{ github.repositoryUrl }}\nImage name: ${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd:${{ github.ref_name }}\nImage URL: https://hub.docker.com/repository/docker/${{ secrets.DOCKER_HUB_USERNAME }}/randnum-cicd"
                   }
                 }
               ]
