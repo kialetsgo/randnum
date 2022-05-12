@@ -36,9 +36,10 @@ jobs:
         uses: slackapi/slack-github-action@v1.18.0
         with:
         # For posting a rich message using Block Kit
-          channel-id: '#sa54-test-submission'
+          #channel-id: '#sa54-test-submission'
           payload: |
             {
+              "text": "done",
               "blocks": [
                 {
                   "type": "section",
